@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 14</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <style>
+          body{
+              background-image: url("data:image/jpeg;base64,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");
+              margin-top:75px;
+              background-repeat: no-repeat;
+              background-size: cover;
+          }
+          
+          .card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+             
+        </style>
+</head>
+
+<body>
+   <h1 class="text-center mb-2 ">Furniture </h1>
+<p class="lead mb-4 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ipsa consequuntur exercitationem hic ea aut!</p>
+    
+    <div class="container">
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            
+            <div class="col text-center">
+            
+                <div class="card mb-3">
+                    
+                    
+                    <img src="https://ii2.pepperfry.com/media/catalog/product/d/a/236x260/daiki-king-size-bed-in-wenge-finish---mintwud-by-pepperfry-daiki-king-size-bed-in-wenge-finish---min-z030ux.jpg" class=" ps-5 w-100" alt="">
+
+                    
+                    
+                    <div class="card-body">
+                        
+                        <h4 class="card-text text-center">Daiki King Size Bed In Wenge Finish</h4>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio soluta commodi
+                            ullam
+                            accusantium voluptas maxime.
+                        </p>
+                        <a href="#" class="btn btn-dark text-center" data-bs-toggle="modal" data-bs-target="#m">Specs</a>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            <div class="col text-center">
+                
+                <div class="card mb-3">
+                    
+                    <img src="https://ii3.pepperfry.com/media/catalog/product/s/h/236x260/shou-2-door-wardrobe-in-wenge-finish---mintwud-by-pepperfry-shou-2-door-wardrobe-in-wenge-finish---m-ektqat.jpg" class="ps-5 w-100" alt="">
+
+                   
+                    
+                    <div class="card-body">
+                        
+                        <h4 class="card-text text-center">Shou 2 Door Wardrobe In Wenge Finish</h4>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio soluta commodi
+                            ullam
+                            accusantium voluptas maxime.
+                        </p>
+                        <a href="#" class="btn btn-dark text-center" data-bs-toggle="modal" data-bs-target="#m">Specs</a>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            <div class="col text-center">
+               
+                <div class="card mb-3">
+                    
+                    <img src="https://ii1.pepperfry.com/media/catalog/product/n/i/236x260/nikki-king-size-bed-in-brown---sonoma-oak-finish---mintwud-by-pepperfry-nikki-king-size-bed-in-brown-3n7tf3.jpg" class="ps-5 w-100" alt="">
+
+                    
+                    
+                    <div class="card-body">
+                        
+                        <h4 class="card-text text-center">Nikki King Size Bed In Brown Oak Finish</h4>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio soluta commodi
+                            ullam
+                            accusantium voluptas maxime.
+                        </p>
+                        <a href="#" class="btn btn-dark text-center" data-bs-toggle="modal" data-bs-target="#m">Specs</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+ 
+ 
+ 
+ <div class="modal fade" id="m" data-bs-backdrop="static">
+     <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h3 class=" text-primary">Christmas sale</h3>
+                 
+                 <button class="btn-close btn-danger" data-bs-dismiss="modal"></button>
+             </div>
+             <div class="modal-body">
+                 
+                 <div class="row">
+                     <div class="col-sm-4 d-flex align-items-center">
+                         <img src="https://ii1.pepperfry.com/media/catalog/product/brands/16108125291531392762web_12july_hero_0000_mintwud.jpg" alt="" class="w-100 shadow rounded">
+                     </div>
+                     <div class="col-sm-8">
+                         <h1>Mintwud by pepperfry</h1>
+                         <h5>₹ 15,299 </h5>
+                         <h6>Save ₹ 8,700 (36% Off), Limited Time Offer</h6>
+                         <p class="lead">Mintwud Presents A Wide Showcase Of Modern Furniture That Is Designed To Seamlessly Blend With Your Interiors.
+                              Crafted For Compact Homes, The Range Is Clean And Convenient, And All The Collections Have An Understated Design Aesthetic 
+                             That Adapts To Any Space.
+                         </p>
+                     </div>
+                 </div>
+             </div>
+             <div class="modal-footer">
+                 <button class="btn btn-success">Buy now</button>
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
